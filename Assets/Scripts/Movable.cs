@@ -1,47 +1,53 @@
 using System;
 using UnityEditor.Experimental.GraphView;
 using UnityEngine;
+using UnityEngine.Tilemaps;
 
 [Serializable]
 public class Movable : MonoBehaviour
 {
+    [SerializeField]
+    private Tilemap collisionTilemap;
+    [SerializeField]
+    private Tilemap bgTilemap;
     [SerializeField] private LayerMask obstacleLayer;
 
     public const float DefaultDistance = 1f;
-    private const float RayCastOffset = DefaultDistance * 0.6f;
-    private const float RayCastDistanceMultiplier = 0.8f;
+    // private const float RayCastOffset = DefaultDistance * 0.6f;
+    // private const float RayCastDistanceMultiplier = 0.8f;
 
     public void MoveUntilStopped(Vector3 direction)
     {
-        while (CanMove(direction, 1f)) Move(direction, 1f);
+        while (CanMove(direction)) Move(direction);
     }
-    public void Move(Vector3 direction, float distance)
+    public void Move(Vector3 direction)
     {
-        if (!CanMove(direction, distance)) return;
+        if (!CanMove(direction)) return;
 
-        transform.position = (transform.position + direction * distance).Snap();
+        transform.position = (transform.position + direction * DefaultDistance).Snap();
     }
 
-    public bool CanMove(Vector3 direction, float distance, bool withMovable = false)
+    public bool CanMove(Vector2 direction)
     {
-        GameObject obstacle = GetObstacle(direction, distance);
-
-        return obstacle == null
+        Vector3Int gridPos = collisionTilemap.WorldToCell(transform.position + (Vector3)direction);
+        return !collisionTilemap.HasTile(gridPos);
+        /* return obstacle == null
                || (withMovable && obstacle.TryGetComponent(out Movable movable)
                    && !ReferenceEquals(this, movable)
-                   && movable.CanMove(direction, distance));
+                   && movable.CanMove(direction, distance)); */
     }
 
-    public GameObject GetObstacle(Vector3 direction, float distance)
-    {
-        direction.Normalize();
+    /*     public GameObject GetObstacle(Vector3 direction)
+        {
+            direction.Normalize();
 
-        Vector3 origin = transform.position + new Vector3(0.5f, 0.5f) + direction.normalized * RayCastOffset;
+            Vector3 origin = transform.position + new Vector3(0.5f, 1.5f) + direction.normalized * RayCastOffset;
+            Debug.Log("Origin: " + origin.ToString());
+            RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance * RayCastDistanceMultiplier, obstacleLayer);
 
-        RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance * RayCastDistanceMultiplier, obstacleLayer);
-
-        return hit.collider != null ? hit.collider.gameObject : null;
-    }
+            Debug.Log("Hit: " + hit.ToString());
+            return hit.collider != null ? hit.collider.gameObject : null;
+        } */
 
     /* #region Editor Debugging
     #if UNITY_EDITOR

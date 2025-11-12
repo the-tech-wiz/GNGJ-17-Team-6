@@ -21,14 +21,14 @@ public class WASDPlayerController : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (MoveLeft.triggered) body.Move(Vector3.left, 1);
-        if (MoveRight.triggered) body.Move(Vector3.right, 1);
-        if (MoveUp.triggered) body.Move(Vector3.up, 1);
-        if (MoveDown.triggered) body.Move(Vector3.down, 1);
+        /*  if (MoveLeft.triggered) body.Move(Vector2.left);
+         if (MoveRight.triggered) body.Move(Vector2.right);
+         if (MoveUp.triggered) body.Move(Vector2.up);
+         if (MoveDown.triggered) body.Move(Vector2.down); */
 
-        /*         if (MoveLeft.triggered) body.MoveUntilStopped(Vector3.left);
-                else if (MoveRight.triggered) body.MoveUntilStopped(Vector3.right);
-                else if (MoveUp.triggered) body.MoveUntilStopped(Vector3.up);
-                else if (MoveDown.triggered) body.MoveUntilStopped(Vector3.down); */
+        if (MoveLeft.triggered) body.MoveUntilStopped(Vector3.left);
+        else if (MoveRight.triggered) body.MoveUntilStopped(Vector3.right);
+        else if (MoveUp.triggered) body.MoveUntilStopped(Vector3.up);
+        else if (MoveDown.triggered) body.MoveUntilStopped(Vector3.down);
     }
 }

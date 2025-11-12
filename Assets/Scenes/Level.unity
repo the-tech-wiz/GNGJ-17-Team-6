@@ -300,8 +300,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WASDMovement
   MoveUp:
     m_Name: Move Up
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: add0d01e-b3c5-4578-a6f6-8685bc01c78b
     m_Processors: 
     m_Interactions: 
@@ -314,11 +314,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move Up
       m_Flags: 0
-    m_Flags: 0
+    m_Flags: 1
   MoveDown:
     m_Name: Move Down
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: 2724b330-1819-4a18-9c2b-58269d97d6f9
     m_Processors: 
     m_Interactions: 
@@ -331,11 +331,11 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move Down
       m_Flags: 0
-    m_Flags: 0
+    m_Flags: 1
   MoveLeft:
     m_Name: Move Left
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: 38b566b9-831c-4c4c-9bcf-96a0e61fc5b3
     m_Processors: 
     m_Interactions: 
@@ -348,24 +348,24 @@ MonoBehaviour:
       m_Groups: 
       m_Action: Move Left
       m_Flags: 0
-    m_Flags: 0
+    m_Flags: 1
   MoveRight:
     m_Name: Move Right
-    m_Type: 0
-    m_ExpectedControlType: 
+    m_Type: 1
+    m_ExpectedControlType: Button
     m_Id: d8e593a7-1a65-4f5b-a17c-ce31f03cea46
     m_Processors: 
     m_Interactions: 
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: df9fcf10-603b-4644-9c8f-5c900658cbf3
-      m_Path: <Keyboard>/rightArrow
+      m_Path: <Keyboard>/d
       m_Interactions: 
       m_Processors: 
       m_Groups: 
       m_Action: Move Right
       m_Flags: 0
-    m_Flags: 0
+    m_Flags: 1
   body: {fileID: 0}
 --- !u!114 &502170279
 MonoBehaviour:
@@ -379,6 +379,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6aca723e1c5234698802ceed398bfc8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Movable
+  collisionTilemap: {fileID: 1493964174}
+  bgTilemap: {fileID: 1243139435}
   obstacleLayer:
     serializedVersion: 2
     m_Bits: 1
@@ -677,8 +679,8 @@ MonoBehaviour:
   sounds:
   - name: Music
     clip: {fileID: 8300000, guid: d994e01da5ba76f49b1cf3ee7d7e8ed7, type: 3}
-    volume: 1
-    loop: 1
+    volume: 0.886
+    loop: 0
     source: {fileID: 0}
 --- !u!4 &1261444376
 Transform:
