@@ -359,7 +359,7 @@ MonoBehaviour:
     m_SingletonActionBindings:
     - m_Name: 
       m_Id: df9fcf10-603b-4644-9c8f-5c900658cbf3
-      m_Path: <Keyboard>/d
+      m_Path: <Keyboard>/rightArrow
       m_Interactions: 
       m_Processors: 
       m_Groups: 
@@ -671,9 +671,15 @@ MonoBehaviour:
   m_GameObject: {fileID: 1261444374}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 77b6f74325bdf114ba05b2b9bf3f89b7, type: 3}
+  m_Script: {fileID: 11500000, guid: 1a9dcd4131b538241bf084f044e2359c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+  sounds:
+  - name: Music
+    clip: {fileID: 8300000, guid: d994e01da5ba76f49b1cf3ee7d7e8ed7, type: 3}
+    volume: 1
+    loop: 1
+    source: {fileID: 0}
 --- !u!4 &1261444376
 Transform:
   m_ObjectHideFlags: 0
