@@ -22,9 +22,9 @@ public class WASDPlayerController : MonoBehaviour
     void Update()
     {
         if (MoveLeft.triggered) body.Move(Vector3.left, 1);
-        else if (MoveRight.triggered) body.Move(Vector3.right, 1);
-        else if (MoveUp.triggered) body.Move(Vector3.up, 1);
-        else if (MoveDown.triggered) body.Move(Vector3.down, 1);
+        if (MoveRight.triggered) body.Move(Vector3.right, 1);
+        if (MoveUp.triggered) body.Move(Vector3.up, 1);
+        if (MoveDown.triggered) body.Move(Vector3.down, 1);
 
         /*         if (MoveLeft.triggered) body.MoveUntilStopped(Vector3.left);
                 else if (MoveRight.triggered) body.MoveUntilStopped(Vector3.right);

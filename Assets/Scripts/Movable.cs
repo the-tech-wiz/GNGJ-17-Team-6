@@ -36,7 +36,7 @@ public class Movable : MonoBehaviour
     {
         direction.Normalize();
 
-        Vector3 origin = transform.position + direction.normalized * RayCastOffset;
+        Vector3 origin = transform.position + new Vector3(0.5f, 0.5f) + direction.normalized * RayCastOffset;
 
         RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance * RayCastDistanceMultiplier, obstacleLayer);
 
