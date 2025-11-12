@@ -1,4 +1,5 @@
 using System;
+using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 [Serializable]
@@ -10,11 +11,15 @@ public class Movable : MonoBehaviour
     private const float RayCastOffset = DefaultDistance * 0.6f;
     private const float RayCastDistanceMultiplier = 0.8f;
 
-    public void Move(Vector3 direction, float distance, bool force = false)
+    public void MoveUntilStopped(Vector3 direction)
     {
-        if (!force && !CanMove(direction, distance)) return;
+        while (CanMove(direction, 1f)) Move(direction, 1f);
+    }
+    public void Move(Vector3 direction, float distance)
+    {
+        if (!CanMove(direction, distance)) return;
 
-        transform.position += direction * distance;
+        transform.position = (transform.position + direction * distance).Snap();
     }
 
     public bool CanMove(Vector3 direction, float distance, bool withMovable = false)
@@ -51,14 +56,14 @@ public class Movable : MonoBehaviour
         DrawRay(origin + Vector3.right * RayCastOffset, Vector3.right, raycastDistance);
     } */
 
-    private void DrawRay(Vector3 origin, Vector3 direction, float distance)
-    {
-        direction.Normalize();
+    // private void DrawRay(Vector3 origin, Vector3 direction, float distance)
+    // {
+    //     direction.Normalize();
 
-        bool canMove = CanMove(direction, distance, withMovable: true);
-        Gizmos.color = canMove ? Color.green : Color.red;
-        Gizmos.DrawRay(origin, direction * distance);
-    }
+    //     bool canMove = CanMove(direction, distance, withMovable: true);
+    //     Gizmos.color = canMove ? Color.green : Color.red;
+    //     Gizmos.DrawRay(origin, direction * distance);
+    // }
     /*  #endif
      #endregion */
 }
