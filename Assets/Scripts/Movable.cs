@@ -34,10 +34,14 @@ public class Movable : MonoBehaviour
     {
         Vector3Int gridPos = collisionTilemap.WorldToCell(transform.position + (Vector3)direction);
         bool nobody = true;
-        for(int i = 0; i < transform.parent.childCount; i++){
-            if (collisionTilemap.WorldToCell(transform.parent.GetChild(i).transform.position) == gridPos)
+        foreach(Transform slime in transform.parent.GetComponentsInChildren<Transform>()){
+            if(collisionTilemap.WorldToCell(slime.position) == gridPos)
                 nobody = false;
         }
+        /*for(int i = 0; i < transform.parent.childCount; i++){
+            if (collisionTilemap.WorldToCell(transform.parent.GetChild(i).transform.position) == gridPos)
+                nobody = false;
+        }*/
         return !collisionTilemap.HasTile(gridPos) && nobody;
         /* return obstacle == null
                || (withMovable && obstacle.TryGetComponent(out Movable movable)
