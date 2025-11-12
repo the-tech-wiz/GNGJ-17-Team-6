@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class WASDPlayerController : MonoBehaviour
 {
+    public bool head;
     public InputAction MoveUp;
     public InputAction MoveDown;
     public InputAction MoveLeft;
@@ -25,10 +26,11 @@ public class WASDPlayerController : MonoBehaviour
          if (MoveRight.triggered) body.Move(Vector2.right);
          if (MoveUp.triggered) body.Move(Vector2.up);
          if (MoveDown.triggered) body.Move(Vector2.down); */
-
-        if (MoveLeft.triggered) body.MoveUntilStopped(Vector3.left);
-        else if (MoveRight.triggered) body.MoveUntilStopped(Vector3.right);
-        else if (MoveUp.triggered) body.MoveUntilStopped(Vector3.up);
-        else if (MoveDown.triggered) body.MoveUntilStopped(Vector3.down);
+        if(head){
+            if (MoveLeft.triggered) body.MoveUntilStopped(Vector3.left);
+            else if (MoveRight.triggered) body.MoveUntilStopped(Vector3.right);
+            else if (MoveUp.triggered) body.MoveUntilStopped(Vector3.up);
+            else if (MoveDown.triggered) body.MoveUntilStopped(Vector3.down);
+        }
     }
 }

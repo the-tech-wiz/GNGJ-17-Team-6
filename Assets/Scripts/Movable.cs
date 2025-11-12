@@ -13,8 +13,11 @@ public class Movable : MonoBehaviour
     [SerializeField] private LayerMask obstacleLayer;
 
     public const float DefaultDistance = 1f;
-    // private const float RayCastOffset = DefaultDistance * 0.6f;
-    // private const float RayCastDistanceMultiplier = 0.8f;
+    //private const float RayCastOffset = DefaultDistance * 0.6f;
+    //private const float RayCastDistanceMultiplier = 0.8f;
+
+    [HideInInspector]
+    public bool isMoving;
 
     public void MoveUntilStopped(Vector3 direction)
     {
@@ -23,14 +26,19 @@ public class Movable : MonoBehaviour
     public void Move(Vector3 direction)
     {
         if (!CanMove(direction)) return;
-
+        
         transform.position = (transform.position + direction * DefaultDistance).Snap();
     }
 
     public bool CanMove(Vector2 direction)
     {
         Vector3Int gridPos = collisionTilemap.WorldToCell(transform.position + (Vector3)direction);
-        return !collisionTilemap.HasTile(gridPos);
+        bool nobody = true;
+        for(int i = 0; i < transform.parent.childCount; i++){
+            if (collisionTilemap.WorldToCell(transform.parent.GetChild(i).transform.position) == gridPos)
+                nobody = false;
+        }
+        return !collisionTilemap.HasTile(gridPos) && nobody;
         /* return obstacle == null
                || (withMovable && obstacle.TryGetComponent(out Movable movable)
                    && !ReferenceEquals(this, movable)
