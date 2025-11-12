@@ -101,3 +101,4 @@ InitTestScene*.unity*
 # CUSTOM 
 # VSCode files
 .vscode
+.vsconfig
