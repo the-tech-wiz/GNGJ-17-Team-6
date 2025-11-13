@@ -1,3 +1,4 @@
+using System;
 using UnityEngine;
 
 public enum Direction
@@ -17,7 +18,7 @@ static class DirectionMethods
             Direction.Down => Vector2.down,
             Direction.Left => Vector2.left,
             Direction.Right => Vector2.right,
-            _ => Vector2.zero
+            _ => throw new NotImplementedException()
         };
     public static Direction Opposite(this Direction self) =>
                 self switch
@@ -26,6 +27,7 @@ static class DirectionMethods
                     Direction.Down => Direction.Up,
                     Direction.Left => Direction.Right,
                     Direction.Right => Direction.Left,
+                    _ => throw new NotImplementedException()
                 };
 }
 

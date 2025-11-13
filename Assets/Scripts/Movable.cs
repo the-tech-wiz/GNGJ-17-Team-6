@@ -34,11 +34,11 @@ public class Movable : MonoBehaviour
     public void MoveUntilStopped(Vector3 direction)
     {
         origin = true;
-        while (CanMove(direction) != Mathf.Infinity) getAhead(direction);
+        while (CanMove(direction) != Mathf.Infinity) GetAhead(direction);
         origin = false;
     }
 
-    public void getAhead(Vector3 direction)
+    public void GetAhead(Vector3 direction)
     {
         Move(direction);
         Broken(direction);
@@ -194,39 +194,5 @@ public class Movable : MonoBehaviour
         return false;
     }
 
-    /*     public GameObject GetObstacle(Vector3 direction)
-        {
-            direction.Normalize();
 
-            Vector3 origin = transform.position + new Vector3(0.5f, 1.5f) + direction.normalized * RayCastOffset;
-            Debug.Log("Origin: " + origin.ToString());
-            RaycastHit2D hit = Physics2D.Raycast(origin, direction, distance * RayCastDistanceMultiplier, obstacleLayer);
-
-            Debug.Log("Hit: " + hit.ToString());
-            return hit.collider != null ? hit.collider.gameObject : null;
-        } */
-
-    /* #region Editor Debugging
-    #if UNITY_EDITOR
-    private void OnDrawGizmos()
-    {
-        Vector3 origin = transform.position;
-        float raycastDistance = DefaultDistance * RayCastDistanceMultiplier;
-
-        DrawRay(origin + Vector3.up * RayCastOffset, Vector3.up, raycastDistance);
-        DrawRay(origin + Vector3.down * RayCastOffset, Vector3.down, raycastDistance);
-        DrawRay(origin + Vector3.left * RayCastOffset, Vector3.left, raycastDistance);
-        DrawRay(origin + Vector3.right * RayCastOffset, Vector3.right, raycastDistance);
-    } */
-
-    // private void DrawRay(Vector3 origin, Vector3 direction, float distance)
-    // {
-    //     direction.Normalize();
-
-    //     bool canMove = CanMove(direction, distance, withMovable: true);
-    //     Gizmos.color = canMove ? Color.green : Color.red;
-    //     Gizmos.DrawRay(origin, direction * distance);
-    // }
-    /*  #endif
-     #endregion */
 }
