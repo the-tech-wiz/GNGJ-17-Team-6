@@ -386,10 +386,86 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 1
   isMoving: 0
+  origin: 0
+  connected: 0
 --- !u!4 &512646552 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
   m_PrefabInstance: {fileID: 4288414450917796108}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &676542709
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1567209201}
+    m_Modifications:
+    - target: {fileID: 1647586753924704368, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: head
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4239374078096619405, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: bgTilemap
+      value: 
+      objectReference: {fileID: 1243139435}
+    - target: {fileID: 4239374078096619405, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: collisionTilemap
+      value: 
+      objectReference: {fileID: 1493964174}
+    - target: {fileID: 6601648345984456922, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+      propertyPath: m_Name
+      value: Slime
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+--- !u!4 &715975217 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3839066817709721155, guid: 505407d983468c54a84d660ff48f122d, type: 3}
+  m_PrefabInstance: {fileID: 676542709}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &969654653
 GameObject:
@@ -729,9 +805,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sounds:
   - name: Music
-    clip: {fileID: 8300000, guid: d994e01da5ba76f49b1cf3ee7d7e8ed7, type: 3}
+    clip: {fileID: 8300000, guid: 131abbc302c83e4439a3dc50d2b3f787, type: 3}
     volume: 0.886
-    loop: 0
+    loop: 1
     source: {fileID: 0}
 --- !u!4 &1261444376
 Transform:
@@ -1636,6 +1712,7 @@ Transform:
   m_Children:
   - {fileID: 512646552}
   - {fileID: 502170274}
+  - {fileID: 715975217}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2114443268
