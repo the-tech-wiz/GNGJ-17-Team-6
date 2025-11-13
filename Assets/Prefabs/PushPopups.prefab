@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 5476321289906514947}
   - component: {fileID: 8105324364287118527}
   - component: {fileID: 3299664168670415523}
+  - component: {fileID: 951180727355540241}
   m_Layer: 5
   m_Name: PushPopups
   m_TagString: Untagged
@@ -105,6 +106,19 @@ MonoBehaviour:
   m_BlockingMask:
     serializedVersion: 2
     m_Bits: 4294967295
+--- !u!114 &951180727355540241
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3837812608071278241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2320238b36deabb25a87098a766b707c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::ShowPushButtons
+  buttons: []
 --- !u!1001 &896188825079726455
 PrefabInstance:
   m_ObjectHideFlags: 0
