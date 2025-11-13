@@ -10,7 +10,7 @@ public class Movable : MonoBehaviour
     private Tilemap collisionTilemap;
     [SerializeField]
     private Tilemap bgTilemap;
-    [SerializeField] private LayerMask obstacleLayer;
+    [SerializeField] private LayerMask wallLayer;
 
     public const float DefaultDistance = 1f;
     private const float weight = 1f;
@@ -23,7 +23,8 @@ public class Movable : MonoBehaviour
     public bool origin;
     [HideInInspector]
     public bool connected;
-    void Awake(){
+    void Awake()
+    {
         isMoving = false;
         origin = false;
         connected = false;
@@ -36,7 +37,8 @@ public class Movable : MonoBehaviour
         origin = false;
     }
 
-    public void getAhead(Vector3 direction){
+    public void getAhead(Vector3 direction)
+    {
         Move(direction);
         Broken(direction);
 
@@ -45,9 +47,10 @@ public class Movable : MonoBehaviour
     public void Move(Vector3 direction)
     {
         isMoving = true;
-        if(!MoveForward(direction) && !origin){
-            Vector3 direction1 = new Vector3(-direction.y, direction.x, direction.z);
-            Vector3 direction2 = new Vector3(direction.y, -direction.x, direction.z);
+        if (!MoveForward(direction) && !origin)
+        {
+            Vector3 direction1 = new(-direction.y, direction.x, direction.z);
+            Vector3 direction2 = new(direction.y, -direction.x, direction.z);
             if (CanMoveForward(direction1) <= CanMoveForward(direction2))
                 MoveForward(direction1);
             else
@@ -55,9 +58,12 @@ public class Movable : MonoBehaviour
         }
         isMoving = false;
     }
-    private bool MoveForward(Vector3 direction){
-        if(CanMoveForward(direction) != Mathf.Infinity){
-            for(int i = 0; i < transform.parent.childCount; i++){
+    private bool MoveForward(Vector3 direction)
+    {
+        if (CanMoveForward(direction) != Mathf.Infinity)
+        {
+            for (int i = 0; i < transform.parent.childCount; i++)
+            {
                 if (collisionTilemap.WorldToCell(transform.parent.GetChild(i).transform.position) == collisionTilemap.WorldToCell(transform.position + (Vector3)direction))
                     transform.parent.GetChild(i).GetComponent<Movable>().Move(direction);
             }
@@ -67,9 +73,10 @@ public class Movable : MonoBehaviour
         return false;
     }
 
-    public float CanMove(Vector2 direction){
-        if(isMoving) return Mathf.Infinity;
-        if(origin) return CanMoveForward(direction);
+    public float CanMove(Vector2 direction)
+    {
+        if (isMoving) return Mathf.Infinity;
+        if (origin) return CanMoveForward(direction);
         return Mathf.Min(CanMoveForward(direction), CanMoveForward(new Vector2(-direction.y, direction.x)), CanMoveForward(new Vector2(direction.y, -direction.x)));
     }
 
@@ -81,11 +88,12 @@ public class Movable : MonoBehaviour
             if(collisionTilemap.WorldToCell(slime.position) == gridPos)
                 nobody = false;
         }*/
-        for(int i = 0; i < transform.parent.childCount; i++){
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
             Transform slime = transform.parent.GetChild(i);
             if (collisionTilemap.WorldToCell(slime.transform.position) == gridPos)
                 if (!slime.GetComponent<Movable>().isMoving)
-                nobody = slime.GetComponent<Movable>().CanMove(direction);
+                    nobody = slime.GetComponent<Movable>().CanMove(direction);
         }
         if (collisionTilemap.HasTile(gridPos) || nobody == Mathf.Infinity)
             return Mathf.Infinity;
@@ -97,52 +105,64 @@ public class Movable : MonoBehaviour
                    && movable.CanMove(direction, distance)); */
     }
 
-    public void Broken(Vector3 direction){
+    public void Broken(Vector3 direction)
+    {
         Connect();
         bool fullGraph = true;
-        foreach(Movable slime in transform.parent.GetComponentsInChildren<Movable>()){
-            if(!slime.connected)
+        foreach (Movable slime in transform.parent.GetComponentsInChildren<Movable>())
+        {
+            if (!slime.connected)
                 fullGraph = false;
         }
-        foreach(Movable slime in transform.parent.GetComponentsInChildren<Movable>()){
+        foreach (Movable slime in transform.parent.GetComponentsInChildren<Movable>())
+        {
             slime.connected = false;
         }
-        if(!fullGraph){
+        if (!fullGraph)
+        {
             Snake(direction);
         }
     }
 
-    public void Connect(){
-        if(connected) return;
+    public void Connect()
+    {
+        if (connected) return;
         connected = true;
-        for(int i = 0; i < transform.parent.childCount; i++){
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
             Transform slime = transform.parent.GetChild(i);
             int myX = collisionTilemap.WorldToCell(transform.position).x;
             int myY = collisionTilemap.WorldToCell(transform.position).y;
             int slimeX = collisionTilemap.WorldToCell(slime.transform.position).x;
             int slimeY = collisionTilemap.WorldToCell(slime.transform.position).y;
-            if ((myX == slimeX && myY + 1 == slimeY)||(myX == slimeX && myY - 1 == slimeY)||(myX + 1 == slimeX && myY == slimeY)||(myX - 1 == slimeX && myY == slimeY))
+            if ((myX == slimeX && myY + 1 == slimeY) || (myX == slimeX && myY - 1 == slimeY) || (myX + 1 == slimeX && myY == slimeY) || (myX - 1 == slimeX && myY == slimeY))
                 slime.GetComponent<Movable>().Connect();
         }
     }
 
-    private void Snake(Vector3 direction){
+    private void Snake(Vector3 direction)
+    {
         Vector3Int oldPos = collisionTilemap.WorldToCell(transform.position - (Vector3)direction);
-        if(!Pull(direction, oldPos)){
-            if(!Pull(new Vector3(-direction.y, direction.x, direction.z), oldPos)){
+        if (!Pull(direction, oldPos))
+        {
+            if (!Pull(new Vector3(-direction.y, direction.x, direction.z), oldPos))
+            {
                 Pull(new Vector3(direction.y, -direction.x, direction.z), oldPos);
             }
         }
     }
 
-    private bool Pull(Vector3 direction, Vector3Int oldPos){
-        for(int i = 0; i < transform.parent.childCount; i++){
+    private bool Pull(Vector3 direction, Vector3Int oldPos)
+    {
+        for (int i = 0; i < transform.parent.childCount; i++)
+        {
             Transform slime = transform.parent.GetChild(i);
             int myX = oldPos.x;
             int myY = oldPos.y;
             int slimeX = collisionTilemap.WorldToCell(slime.transform.position).x;
             int slimeY = collisionTilemap.WorldToCell(slime.transform.position).y;
-            if ((myX - slimeX == direction.x) && (myY - slimeY == direction.y)){
+            if ((myX - slimeX == direction.x) && (myY - slimeY == direction.y))
+            {
                 slime.GetComponent<Movable>().MoveForward(direction);
                 slime.GetComponent<Movable>().Broken(direction);
                 return true;
