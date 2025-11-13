@@ -42,8 +42,8 @@ public class Movable : MonoBehaviour
     {
         origin = true;
         Move(direction);
-        Broken(direction);
         origin = false;
+        Broken(direction);
     }
 
     void Move(Vector3 direction)
