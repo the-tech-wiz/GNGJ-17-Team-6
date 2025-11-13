@@ -31,21 +31,22 @@ public class Movable : MonoBehaviour
         connected = false;
     }
 
-    public void MoveUntilStopped(Vector3 direction)
-    {
-        origin = true;
-        while (CanMove(direction) != Mathf.Infinity) GetAhead(direction);
-        origin = false;
-    }
+    /*     public void MoveUntilStopped(Vector3 direction)
+        {
+            origin = true;
+            while (CanMove(direction) != Mathf.Infinity) GetAhead(direction);
+            origin = false;
+        } */
 
     public void GetAhead(Vector3 direction)
     {
+        origin = true;
         Move(direction);
         Broken(direction);
-
+        origin = false;
     }
 
-    public void Move(Vector3 direction)
+    void Move(Vector3 direction)
     {
         isMoving = true;
         if (!MoveForward(direction) && !origin)
@@ -74,14 +75,14 @@ public class Movable : MonoBehaviour
         return false;
     }
 
-    public float CanMove(Vector2 direction)
+    float CanMove(Vector2 direction)
     {
         if (isMoving) return Mathf.Infinity;
         if (origin) return CanMoveForward(direction);
         return Mathf.Min(CanMoveForward(direction), CanMoveForward(new Vector2(-direction.y, direction.x)), CanMoveForward(new Vector2(direction.y, -direction.x)));
     }
 
-    public float CanMoveForward(Vector2 direction)
+    float CanMoveForward(Vector2 direction)
     {
         Vector3Int gridPos = collisionTilemap.WorldToCell(transform.position + (Vector3)direction);
         float nobody = 0f;
@@ -106,7 +107,7 @@ public class Movable : MonoBehaviour
                    && movable.CanMove(direction, distance)); */
     }
     /**
-    Basic neighbour check for UI purposes
+    Basic neighbour check for visual purposes
     */
     public List<Direction> Neighbours()
     {
@@ -128,7 +129,7 @@ public class Movable : MonoBehaviour
         return neighbours;
 
     }
-    public void Broken(Vector3 direction)
+    void Broken(Vector3 direction)
     {
         Connect();
         bool fullGraph = true;
