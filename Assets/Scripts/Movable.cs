@@ -25,23 +25,29 @@ public class Movable : MonoBehaviour
     }
     public void Move(Vector3 direction)
     {
+        isMoving = true;
         if (!CanMove(direction)) return;
         
+        for(int i = 0; i < transform.parent.childCount; i++){
+            if (collisionTilemap.WorldToCell(transform.parent.GetChild(i).transform.position) == collisionTilemap.WorldToCell(transform.position + (Vector3)direction))
+                transform.parent.GetChild(i).GetComponent<Movable>().Move(direction);
+        }
         transform.position = (transform.position + direction * DefaultDistance).Snap();
+        isMoving = false;
     }
 
     public bool CanMove(Vector2 direction)
     {
         Vector3Int gridPos = collisionTilemap.WorldToCell(transform.position + (Vector3)direction);
         bool nobody = true;
-        foreach(Transform slime in transform.parent.GetComponentsInChildren<Transform>()){
+        /*foreach(Transform slime in transform.parent.GetComponentsInChildren<Transform>()){
             if(collisionTilemap.WorldToCell(slime.position) == gridPos)
                 nobody = false;
-        }
-        /*for(int i = 0; i < transform.parent.childCount; i++){
-            if (collisionTilemap.WorldToCell(transform.parent.GetChild(i).transform.position) == gridPos)
-                nobody = false;
         }*/
+        for(int i = 0; i < transform.parent.childCount; i++){
+            if (collisionTilemap.WorldToCell(transform.parent.GetChild(i).transform.position) == gridPos)
+                nobody = transform.parent.GetChild(i).GetComponent<Movable>().CanMove(direction);
+        }
         return !collisionTilemap.HasTile(gridPos) && nobody;
         /* return obstacle == null
                || (withMovable && obstacle.TryGetComponent(out Movable movable)
