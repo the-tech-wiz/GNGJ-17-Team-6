@@ -1,7 +1,8 @@
 using System;
-using UnityEditor.Experimental.GraphView;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
+using System.Linq;
 
 [Serializable]
 public class Movable : MonoBehaviour
@@ -104,7 +105,29 @@ public class Movable : MonoBehaviour
                    && !ReferenceEquals(this, movable)
                    && movable.CanMove(direction, distance)); */
     }
+    /**
+    Basic neighbour check for UI purposes
+    */
+    public List<Direction> Neighbours()
+    {
+        List<Direction> neighbours = new();
+        Movable[] allSlimes = transform.parent.GetComponentsInChildren<Movable>();
+        foreach (Direction dir in Enum.GetValues(typeof(Direction)))
+        {
+            Vector3Int gridPos = collisionTilemap.WorldToCell(transform.position + (Vector3)dir.ToVec());
+            foreach (var slime in allSlimes)
+            {
+                Vector3Int slimeGridPos = collisionTilemap.WorldToCell(slime.transform.position);
+                if (slimeGridPos == gridPos)
+                {
+                    neighbours.Add(dir);
+                }
+            }
+        }
 
+        return neighbours;
+
+    }
     public void Broken(Vector3 direction)
     {
         Connect();
