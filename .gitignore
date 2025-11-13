@@ -102,3 +102,6 @@ InitTestScene*.unity*
 # VSCode files
 .vscode
 .vsconfig
+
+# Recovery files
+/_Recovery
