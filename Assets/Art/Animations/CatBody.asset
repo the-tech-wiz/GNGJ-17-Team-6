@@ -1,0 +1,47 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c08e0e74bf569c244b81bcad34a478ff, type: 3}
+  m_Name: CatBody
+  m_EditorClassIdentifier: Assembly-CSharp::RuleSet
+  entries:
+  - condition: -1
+    animatedSprite: {fileID: 11400000, guid: ffcd93ca4ebd499638524a1140963809, type: 2}
+  - condition: 0
+    animatedSprite: {fileID: 11400000, guid: 32624c806e7b941e6badcf6b1272c020, type: 2}
+  - condition: 1
+    animatedSprite: {fileID: 11400000, guid: bb05abba1fbdec5b3a20858d21ef6a9d, type: 2}
+  - condition: 4
+    animatedSprite: {fileID: 11400000, guid: 9c964a204243e9a7693b330c64fcc2f6, type: 2}
+  - condition: 8
+    animatedSprite: {fileID: 11400000, guid: 773fa5da8cf6e18e3a293d6e3410559f, type: 2}
+  - condition: 2
+    animatedSprite: {fileID: 11400000, guid: 4b180458e862dd09d8839eeb8659ac71, type: 2}
+  - condition: 3
+    animatedSprite: {fileID: 11400000, guid: c4b872b52c81aff9da32e481a701f921, type: 2}
+  - condition: 6
+    animatedSprite: {fileID: 11400000, guid: 7d90d57f18d9cc038baca90888d530af, type: 2}
+  - condition: 12
+    animatedSprite: {fileID: 11400000, guid: 3ed220205407483b09b5744598b7ce50, type: 2}
+  - condition: 9
+    animatedSprite: {fileID: 11400000, guid: 41d239565e3cf9af9bef92c6971af4f0, type: 2}
+  - condition: 5
+    animatedSprite: {fileID: 11400000, guid: 9b7fe19018f1f1ceb8067893009434bf, type: 2}
+  - condition: 10
+    animatedSprite: {fileID: 11400000, guid: 218d11aafeff02b33b63012d8394cf76, type: 2}
+  - condition: 14
+    animatedSprite: {fileID: 11400000, guid: 361bc91eacbf23d84a185da6214304d7, type: 2}
+  - condition: 13
+    animatedSprite: {fileID: 11400000, guid: f339d287399931ff1a8911ad05ea9305, type: 2}
+  - condition: 11
+    animatedSprite: {fileID: 11400000, guid: 815df991258046113b1d3afaa62cfe0d, type: 2}
+  - condition: 7
+    animatedSprite: {fileID: 11400000, guid: cbb81c8888ab250d1bb1699426bbf9d4, type: 2}

@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 1060446718958115047}
   - component: {fileID: 8427736340227581867}
   - component: {fileID: 4239374078096619405}
+  - component: {fileID: 7532598849570773358}
+  - component: {fileID: 1149820181443673041}
   m_Layer: 0
   m_Name: Slime
   m_TagString: Player
@@ -82,7 +84,7 @@ SpriteRenderer:
   m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 1
   m_Sprite: {fileID: 21300000, guid: 05f8f1209d2e8aafb9d4c14b7be57b6c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -184,9 +186,35 @@ MonoBehaviour:
   wallLayer:
     serializedVersion: 2
     m_Bits: 0
-  isMoving: 0
-  origin: 0
-  connected: 0
+--- !u!114 &7532598849570773358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601648345984456922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1183316f2ca623233811d49361ce7c1e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerTileUpdater
+  ruleset: {fileID: 11400000, guid: 42d79c82e6049a913a5f5580962f24b1, type: 2}
+  animator: {fileID: 1149820181443673041}
+  body: {fileID: 4239374078096619405}
+--- !u!114 &1149820181443673041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6601648345984456922}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8552bc89f396da2759494a52c62db719, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::CustomAnimator
+  sr: {fileID: 547803547294145613}
+  current: {fileID: 11400000, guid: 32624c806e7b941e6badcf6b1272c020, type: 2}
 --- !u!1001 &3268790455379624713
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -283,6 +311,10 @@ PrefabInstance:
       propertyPath: body
       value: 
       objectReference: {fileID: 4239374078096619405}
+    - target: {fileID: 8105324364287118527, guid: 4a6e03a1621e8bd0b833b4e4602bf4ac, type: 3}
+      propertyPath: m_PresetInfoIsWorld
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []

@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 232a9577a2092b989a1978855a331be7, type: 3}
+  m_Name: Tile8_Anim
+  m_EditorClassIdentifier: Assembly-CSharp::SpriteAnim
+  frames:
+  - {fileID: 2956420578257534124, guid: f933a9d564f974133b64a61a82dab364, type: 3}
+  - {fileID: 1379965656, guid: f933a9d564f974133b64a61a82dab364, type: 3}
+  - {fileID: -1474545882, guid: f933a9d564f974133b64a61a82dab364, type: 3}
+  - {fileID: 1405768375, guid: f933a9d564f974133b64a61a82dab364, type: 3}
+  - {fileID: 453539695, guid: f933a9d564f974133b64a61a82dab364, type: 3}
+  - {fileID: -1349993600, guid: f933a9d564f974133b64a61a82dab364, type: 3}
+  fps: 12

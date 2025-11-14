@@ -24,6 +24,7 @@ public class Movable : MonoBehaviour
         isMoving = false;
         origin = false;
         connected = false;
+        collisionTilemap = GameObject.Find("Obstacles").GetComponent<Tilemap>();
     }
 
     public void MoveUntilStopped(Vector3 direction)
