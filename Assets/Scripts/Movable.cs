@@ -15,15 +15,10 @@ public class Movable : MonoBehaviour
 
     public const float DefaultDistance = 1f;
     private const float weight = 1f;
-    //private const float RayCastOffset = DefaultDistance * 0.6f;
-    //private const float RayCastDistanceMultiplier = 0.8f;
-
-    [HideInInspector]
-    public bool isMoving;
-    [HideInInspector]
-    public bool origin;
-    [HideInInspector]
-    public bool connected;
+    public const float delayPerStep = 0.25f;
+    bool isMoving;
+    bool origin;
+    bool connected;
     void Awake()
     {
         isMoving = false;
@@ -34,20 +29,22 @@ public class Movable : MonoBehaviour
     public void MoveUntilStopped(Vector3 direction)
     {
         bool inMotion = false;
-        foreach(Movable slime in transform.parent.GetComponentsInChildren<Movable>()){
+        foreach (Movable slime in transform.parent.GetComponentsInChildren<Movable>())
+        {
             if (slime.origin == true) inMotion = true;
         }
-        if(!inMotion){
+        if (!inMotion)
+        {
             baseDirection = direction;
             origin = true;
-            InvokeRepeating("MUS", 0f, 1f);
+            InvokeRepeating("MUS", 0f, delayPerStep);
         }
         /*while (CanMove(direction) != Mathf.Infinity){ 
             Move(direction);
             yield return new WaitForSeconds(1f);
         }
         origin = false;*/
-    } 
+    }
 
     private Vector3 baseDirection;
     //private float delayTime = 1f;
@@ -55,7 +52,8 @@ public class Movable : MonoBehaviour
     {
         Vector3 direction = baseDirection;
         GetAhead(direction);
-        if (CanMove(direction) == Mathf.Infinity){
+        if (CanMove(direction) == Mathf.Infinity)
+        {
             origin = false;
             CancelInvoke();
         }
