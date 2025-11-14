@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    public VictoryManager winScreen;
     public bool taken = false;
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
@@ -12,7 +13,7 @@ public class Goal : MonoBehaviour
                 if (!plate.taken) isAll = false;
             }
             if(isAll)
-                SceneController.instance.NextLevel();
+                winScreen.Win();
         }
     }
 
