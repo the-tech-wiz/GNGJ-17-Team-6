@@ -12,7 +12,6 @@ GameObject:
   - component: {fileID: 547803547294145613}
   - component: {fileID: 1060446718958115047}
   - component: {fileID: 8427736340227581867}
-  - component: {fileID: 1647586753924704368}
   - component: {fileID: 4239374078096619405}
   m_Layer: 0
   m_Name: Slime
@@ -168,88 +167,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &1647586753924704368
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 6601648345984456922}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4705d5f9ec428f5bc8f962102584d3c0, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::WASDMovement
-  head: 1
-  MoveUp:
-    m_Name: Move Up
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: add0d01e-b3c5-4578-a6f6-8685bc01c78b
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 3b442fcf-87e6-47cc-841d-af77c0b74199
-      m_Path: <Keyboard>/w
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Up
-      m_Flags: 0
-    m_Flags: 1
-  MoveDown:
-    m_Name: Move Down
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 2724b330-1819-4a18-9c2b-58269d97d6f9
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: 86ba0e11-4819-40ed-ade1-b2bbbdbbd027
-      m_Path: <Keyboard>/s
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Down
-      m_Flags: 0
-    m_Flags: 1
-  MoveLeft:
-    m_Name: Move Left
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: 38b566b9-831c-4c4c-9bcf-96a0e61fc5b3
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: b826bfe3-33fb-4fbf-a941-cd649d31b52e
-      m_Path: <Keyboard>/a
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Left
-      m_Flags: 0
-    m_Flags: 1
-  MoveRight:
-    m_Name: Move Right
-    m_Type: 1
-    m_ExpectedControlType: Button
-    m_Id: d8e593a7-1a65-4f5b-a17c-ce31f03cea46
-    m_Processors: 
-    m_Interactions: 
-    m_SingletonActionBindings:
-    - m_Name: 
-      m_Id: df9fcf10-603b-4644-9c8f-5c900658cbf3
-      m_Path: <Keyboard>/d
-      m_Interactions: 
-      m_Processors: 
-      m_Groups: 
-      m_Action: Move Right
-      m_Flags: 0
-    m_Flags: 1
-  body: {fileID: 0}
 --- !u!114 &4239374078096619405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,9 +181,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::Movable
   collisionTilemap: {fileID: 0}
   bgTilemap: {fileID: 0}
-  obstacleLayer:
+  wallLayer:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 0
   isMoving: 0
   origin: 0
   connected: 0
