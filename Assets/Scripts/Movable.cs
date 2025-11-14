@@ -31,18 +31,41 @@ public class Movable : MonoBehaviour
         connected = false;
     }
 
-    /*     public void MoveUntilStopped(Vector3 direction)
-        {
+    public void MoveUntilStopped(Vector3 direction)
+    {
+        bool inMotion = false;
+        foreach(Movable slime in transform.parent.GetComponentsInChildren<Movable>()){
+            if (slime.origin == true) inMotion = true;
+        }
+        if(!inMotion){
+            baseDirection = direction;
             origin = true;
-            while (CanMove(direction) != Mathf.Infinity) GetAhead(direction);
+            InvokeRepeating("MUS", 0f, 1f);
+        }
+        /*while (CanMove(direction) != Mathf.Infinity){ 
+            Move(direction);
+            yield return new WaitForSeconds(1f);
+        }
+        origin = false;*/
+    } 
+
+    private Vector3 baseDirection;
+    //private float delayTime = 1f;
+    void MUS()
+    {
+        Vector3 direction = baseDirection;
+        GetAhead(direction);
+        if (CanMove(direction) == Mathf.Infinity){
             origin = false;
-        } */
+            CancelInvoke();
+        }
+    }
 
     public void GetAhead(Vector3 direction)
     {
-        origin = true;
+        //origin = true;
         Move(direction);
-        origin = false;
+        //origin = false;
         Broken(direction);
     }
 

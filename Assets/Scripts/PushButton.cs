@@ -12,7 +12,7 @@ public class PushButton : MonoBehaviour
     {
         button = GetComponent<Button>();
         body = GetComponentInParent<Movable>();
-        button.onClick.AddListener(() => body.GetAhead(pushDir.ToVec()));
+        button.onClick.AddListener(() => body.MoveUntilStopped(pushDir.ToVec()));
     }
 
 }

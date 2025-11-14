@@ -20,6 +20,7 @@ static class DirectionMethods
             Direction.Left => Vector2.left,
             Direction.Right => Vector2.right,
             Direction.None => Vector2.zero,
+            _ => throw new NotImplementedException()
         };
     public static Direction Opposite(this Direction self) =>
                 self switch
