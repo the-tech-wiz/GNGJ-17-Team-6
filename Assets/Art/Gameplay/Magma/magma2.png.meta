@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 4799bbbd82f02c547bd8d1d859fa5315
+guid: 9f6940e499210df4b8952c1e7a00aab7
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 7404452487037866044
-    second: magma2_0
+      213: -6462348433536566733
+    second: magma2 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -37,7 +37,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -100,7 +100,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: magma2_0
+      name: magma2 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: c3056267e46e1c660800000000000000
-      internalID: 7404452487037866044
+      spriteID: 33a3044b6502156a0800000000000000
+      internalID: -6462348433536566733
       vertices: []
       indices: 
       edges: []
@@ -135,7 +135,7 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      magma2_0: 7404452487037866044
+      magma2 1_0: -6462348433536566733
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
