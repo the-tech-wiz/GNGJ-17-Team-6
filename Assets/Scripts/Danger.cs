@@ -4,8 +4,14 @@ public class Danger : MonoBehaviour
 {
     public VictoryManager failScreen;
 
-    private void OnTriggerEnter2D(Collider2D collision){
-        if(collision.CompareTag("Player")){
+    void Start()
+    {
+        failScreen = GameObject.Find("Menus").GetComponent<VictoryManager>();
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player"))
+        {
             failScreen.Fail();
         }
     }
