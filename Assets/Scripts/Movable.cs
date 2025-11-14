@@ -109,9 +109,9 @@ public class Movable : MonoBehaviour
     /**
     Basic neighbour check for visual purposes
     */
-    public List<Direction> Neighbours()
+    public Direction Neighbours()
     {
-        List<Direction> neighbours = new();
+        Direction hasNeighs = 0;
         Movable[] allSlimes = transform.parent.GetComponentsInChildren<Movable>();
         foreach (Direction dir in Enum.GetValues(typeof(Direction)))
         {
@@ -121,12 +121,12 @@ public class Movable : MonoBehaviour
                 Vector3Int slimeGridPos = collisionTilemap.WorldToCell(slime.transform.position);
                 if (slimeGridPos == gridPos)
                 {
-                    neighbours.Add(dir);
+                    hasNeighs |= dir;
                 }
             }
         }
 
-        return neighbours;
+        return hasNeighs;
 
     }
     void Broken(Vector3 direction)

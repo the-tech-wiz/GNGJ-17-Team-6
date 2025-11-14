@@ -21,10 +21,11 @@ public class ShowPushButtons : MonoBehaviour
     void Update()
     {
         var neighs = body.Neighbours();
+        Debug.Log(neighs);
         foreach (var button in buttons)
         {
 
-            if (neighs.Contains(button.pushDir.Opposite()))
+            if ((neighs & button.pushDir.Opposite()) != 0)
             {
                 button.gameObject.SetActive(false);
             }

@@ -1,12 +1,13 @@
 using System;
 using UnityEngine;
-
+[System.Flags]
 public enum Direction
 {
-    Up,
-    Down,
-    Left,
-    Right
+    None = 0,
+    Up = 1 << 0,   // 1
+    Right = 1 << 1,   // 2
+    Down = 1 << 2,   // 4
+    Left = 1 << 3,   // 8
 }
 
 static class DirectionMethods
@@ -18,7 +19,7 @@ static class DirectionMethods
             Direction.Down => Vector2.down,
             Direction.Left => Vector2.left,
             Direction.Right => Vector2.right,
-            _ => throw new NotImplementedException()
+            Direction.None => Vector2.zero,
         };
     public static Direction Opposite(this Direction self) =>
                 self switch
@@ -27,6 +28,7 @@ static class DirectionMethods
                     Direction.Down => Direction.Up,
                     Direction.Left => Direction.Right,
                     Direction.Right => Direction.Left,
+                    Direction.None => Direction.None,
                     _ => throw new NotImplementedException()
                 };
 }
