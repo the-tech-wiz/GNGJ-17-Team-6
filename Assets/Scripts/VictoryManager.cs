@@ -20,7 +20,7 @@ public class VictoryManager : MonoBehaviour
         AudioManager.instance.SetSound("Music", 0f);
         AudioManager.instance.Play("Lose");
         failScreenUI.SetActive(true);
-        StartCoroutine(ReturnSound(5f, "Music", volume));
+        StartCoroutine(ReturnSound(3f, "Music", volume));
     }
 
     public void NextLevel(){
@@ -33,10 +33,12 @@ public class VictoryManager : MonoBehaviour
 
     public void Retry(){
         SceneController.instance.Reload();
+        AudioManager.instance.SetSound("Music", 0.886f);
     }
 
     IEnumerator ReturnSound(float time, string name, float volume)
     {
+        //Debug.Log("ReturnSound");
         yield return new WaitForSeconds(time);
         AudioManager.instance.SetSound(name, volume);
     }
