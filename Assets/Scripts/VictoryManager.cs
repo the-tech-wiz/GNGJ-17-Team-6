@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class VictoryManager : MonoBehaviour
 {
@@ -11,8 +12,11 @@ public class VictoryManager : MonoBehaviour
     }
     
     public void Fail(){
+        float volume = AudioManager.instance.GetVolume("Music");
+        AudioManager.instance.SetSound("Music", 0f);
         AudioManager.instance.Play("Lose");
         failScreenUI.SetActive(true);
+        StartCoroutine(ReturnSound(5f, "Music", volume));
     }
 
     public void NextLevel(){
@@ -25,5 +29,11 @@ public class VictoryManager : MonoBehaviour
 
     public void Retry(){
         SceneController.instance.Reload();
+    }
+
+    IEnumerator ReturnSound(float time, string name, float volume)
+    {
+        yield return new WaitForSeconds(time);
+        AudioManager.instance.SetSound(name, volume);
     }
 }
