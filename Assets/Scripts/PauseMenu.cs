@@ -46,4 +46,8 @@ public class PauseMenu : MonoBehaviour
     public void Options(){
         Debug.LogWarning("Options not implemented!");
     }
+
+    public void Click(){
+        AudioManager.instance.Play("Button");
+    }
 }
