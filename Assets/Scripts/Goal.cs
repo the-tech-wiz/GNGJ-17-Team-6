@@ -8,9 +8,9 @@ public class Goal : MonoBehaviour
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
             taken += 1;
-            Goal[] goals = transform.parent.GetComponentsInChildren<Goal>();
+            //Goal[] goals = transform.parent.GetComponentsInChildren<Goal>();
             bool isAll = true;
-            foreach(Goal plate in goals){
+            foreach(Goal plate in transform.parent.GetComponentsInChildren<Goal>()){
                 if (plate.taken == 0) isAll = false;
             }
             if(isAll)
