@@ -13,6 +13,7 @@ public class Goal : MonoBehaviour
     public int taken = 0;
     private void OnTriggerEnter2D(Collider2D collision){
         if(collision.CompareTag("Player")){
+            //AudioManager.instance.Play("Plate");
             taken += 1;
             //Goal[] goals = transform.parent.GetComponentsInChildren<Goal>();
             bool isAll = true;
