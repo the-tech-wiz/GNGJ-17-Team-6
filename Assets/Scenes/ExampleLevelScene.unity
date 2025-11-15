@@ -275,6 +275,10 @@ PrefabInstance:
       propertyPath: current
       value: 
       objectReference: {fileID: 11400000, guid: 32624c806e7b941e6badcf6b1272c020, type: 2}
+    - target: {fileID: 3142417265024778877, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_AdditionalShaderChannelsFlag
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3917456633119855004, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
