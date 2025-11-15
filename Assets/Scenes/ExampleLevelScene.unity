@@ -207,6 +207,30 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 33528657291169694, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 33528657291169694, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 201591438746939896, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_Size.x
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 201591438746939896, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_Size.y
+      value: 0.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 201591438746939896, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 201591438746939896, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_SpriteTilingProperty.newSize.y
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 527450562134048989, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
       propertyPath: m_Animations.Array.size
       value: 16
@@ -271,14 +295,18 @@ PrefabInstance:
       propertyPath: 'm_Animations.Array.data[15]'
       value: 
       objectReference: {fileID: 7400000, guid: f4a8dce91a99317c3832d16758dc1116, type: 2}
+    - target: {fileID: 1744280231737320846, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 2487970598335404060, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
       propertyPath: current
       value: 
       objectReference: {fileID: 11400000, guid: 32624c806e7b941e6badcf6b1272c020, type: 2}
-    - target: {fileID: 3142417265024778877, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
-      propertyPath: m_AdditionalShaderChannelsFlag
-      value: 0
-      objectReference: {fileID: 0}
+    - target: {fileID: 3391422441184423155, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 62c89aa11ddb26d00bb392d0fb736ee6, type: 2}
     - target: {fileID: 3917456633119855004, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -286,6 +314,22 @@ PrefabInstance:
     - target: {fileID: 3917456633119855004, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
       propertyPath: m_LocalPosition.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595222142155455350, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_Size.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595222142155455350, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_Size.y
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4595222142155455350, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: dc7ac660d05663147b3f5d60df1d3e04, type: 3}
+    - target: {fileID: 4595222142155455350, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
+      propertyPath: m_WasSpriteAssigned
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4810719087901802213, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
       propertyPath: m_Name
@@ -339,10 +383,6 @@ PrefabInstance:
       propertyPath: m_PresetInfoIsWorld
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 7329712057552926933, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
-      propertyPath: m_Camera
-      value: 
-      objectReference: {fileID: 2129960382}
     - target: {fileID: 8569843760170629911, guid: 2bb82bf61f7eb2784b835131cd0bfc00, type: 3}
       propertyPath: m_IsActive
       value: 1
