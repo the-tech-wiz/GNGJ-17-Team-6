@@ -28,6 +28,8 @@ public class AudioManager : MonoBehaviour
 
     void Start(){
         Play("Music");
+        Pause("Music");
+        Play("Theme");
     }
 
     public void Play(string name){
@@ -37,5 +39,14 @@ public class AudioManager : MonoBehaviour
             return;
         }
         s.source.Play();
+    }
+
+    public void Pause(string name){
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(s == null){
+            Debug.LogWarning("Sound " + name + " not found!");
+            return;
+        }
+        s.source.Pause();
     }
 }

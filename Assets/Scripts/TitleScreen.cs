@@ -9,11 +9,15 @@ public class TitleScreen : MonoBehaviour
     {
         if(Keyboard.current.anyKey.isPressed){
             Debug.Log("Triggered");
+            AudioManager.instance.Pause("Theme");
+            AudioManager.instance.Play("Select");
             gameObject.SetActive(false);
         }
     }
 
     public void Remove(){
+        AudioManager.instance.Pause("Theme");
+        AudioManager.instance.Play("Select");
         gameObject.SetActive(false);
     }
 }
