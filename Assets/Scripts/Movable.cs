@@ -63,6 +63,11 @@ public class Movable : MonoBehaviour
 
     public void GetAhead(Vector3 direction)
     {
+        int stepSound = UnityEngine.Random.Range(0, 2);
+        if (stepSound == 0)
+            AudioManager.instance.Play("Step1");
+        else
+            AudioManager.instance.Play("Step2");
         //origin = true;
         Move(direction);
         //origin = false;

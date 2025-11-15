@@ -85,3 +85,13 @@ MonoBehaviour:
     volume: 0.886
     loop: 0
     source: {fileID: 0}
+  - name: Step1
+    clip: {fileID: 8300000, guid: 07982d08692b5394f9de03b10ed3297e, type: 3}
+    volume: 0.886
+    loop: 0
+    source: {fileID: 0}
+  - name: Step2
+    clip: {fileID: 8300000, guid: f39d892f6c0b584409e788ec94bdff27, type: 3}
+    volume: 0.886
+    loop: 0
+    source: {fileID: 0}
