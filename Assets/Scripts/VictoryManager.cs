@@ -6,10 +6,12 @@ public class VictoryManager : MonoBehaviour
     public GameObject failScreenUI;
 
     public void Win(){
+        AudioManager.instance.Play("Win");
         victoryScreenUI.SetActive(true);
     }
     
     public void Fail(){
+        AudioManager.instance.Play("Lose");
         failScreenUI.SetActive(true);
     }
 
@@ -18,7 +20,7 @@ public class VictoryManager : MonoBehaviour
     }
 
     public void Home(){
-        SceneController.instance.LoadScene("Main Menu");
+        SceneController.instance.LoadScene("Level Select");
     }
 
     public void Retry(){
