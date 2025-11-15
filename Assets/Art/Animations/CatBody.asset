@@ -28,7 +28,7 @@ MonoBehaviour:
   - condition: 3
     animatedSprite: {fileID: 11400000, guid: c4b872b52c81aff9da32e481a701f921, type: 2}
   - condition: 6
-    animatedSprite: {fileID: 11400000, guid: 7d90d57f18d9cc038baca90888d530af, type: 2}
+    animatedSprite: {fileID: 11400000, guid: f089e7d1ca205cf0b82f94a155c4ddcd, type: 2}
   - condition: 12
     animatedSprite: {fileID: 11400000, guid: 3ed220205407483b09b5744598b7ce50, type: 2}
   - condition: 9

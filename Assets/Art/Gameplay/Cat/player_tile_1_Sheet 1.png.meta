@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: d13f2a9dfb6aa248fb103203577a6db1
+guid: 2c06d918d56e3b1ada966e78ffc74721
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: 4160635012330822537
-    second: obstacle_0
+      213: -4956565898162785445
+    second: player_tile_1_Sheet 1_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -113,7 +113,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: obstacle_0
+      name: player_tile_1_Sheet 1_0
       rect:
         serializedVersion: 2
         x: 0
@@ -128,8 +128,118 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 98b180eef7b8db930800000000000000
-      internalID: 4160635012330822537
+      spriteID: b53313e939db63bb0800000000000000
+      internalID: -4956565898162785445
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_tile_1_Sheet 1_1
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0dce87b5692884b48e80410f3d0ecab
+      internalID: -1312538990
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_tile_1_Sheet 1_2
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7c159eb7edc9fde8fa118eb885255814
+      internalID: 1240784014
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_tile_1_Sheet 1_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c453d07e6f08920bb10439c75d9842a
+      internalID: -1526445240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_tile_1_Sheet 1_4
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cb897d847bd06fa8b8cf6a3ed8762e50
+      internalID: 1885838569
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: player_tile_1_Sheet 1_5
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 0
+        width: 32
+        height: 32
+      alignment: 6
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5fd0401f7dd35abcc82c33f18e01bf90
+      internalID: 30187538
       vertices: []
       indices: 
       edges: []
@@ -138,7 +248,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: d3126fdb33d38fb45b996daf741db432
+    spriteID: 9bbdd1742b8f34eae957e781330a9e9a
     internalID: 0
     vertices: []
     indices: 
@@ -150,7 +260,12 @@ TextureImporter:
       - key: SpriteEditor.SliceSettings
         value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":32.0,"y":32.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.0,"y":0.0},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":6,"pivotUnitMode":0,"slicingType":1,"keepEmptyRects":false,"isAlternate":false}'
     nameFileIdTable:
-      obstacle_0: 4160635012330822537
+      player_tile_1_Sheet 1_0: -4956565898162785445
+      player_tile_1_Sheet 1_1: -1312538990
+      player_tile_1_Sheet 1_2: 1240784014
+      player_tile_1_Sheet 1_3: -1526445240
+      player_tile_1_Sheet 1_4: 1885838569
+      player_tile_1_Sheet 1_5: 30187538
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
