@@ -17,7 +17,8 @@ public class Movable : MonoBehaviour
     private const float weight = 1f;
     public const float delayPerStep = 0.25f;
     bool isMoving;
-    bool origin;
+    [HideInInspector]
+    public bool origin;
     bool connected;
     void Awake()
     {

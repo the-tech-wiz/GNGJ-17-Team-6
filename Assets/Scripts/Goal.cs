@@ -20,8 +20,22 @@ public class Goal : MonoBehaviour
                 if (plate.taken == 0) isAll = false;
             }
             if(isAll)
-                winScreen.Win();
+                if(Stopped())
+                    winScreen.Win();
         }
+    }
+
+    private bool Stopped(){
+        Transform cat = GameObject.Find("Controllables").GetComponent<Transform>();
+        if(cat == null){
+            Debug.LogWarning("Controllables not found!");
+            return true;
+        }
+        foreach(Movable slime in cat.GetComponentsInChildren<Movable>()){
+            if(slime.origin)
+                return false;
+        }
+        return true;
     }
 
     private void OnTriggerExit2D(Collider2D collision){
