@@ -16,7 +16,6 @@ public class CustomAnimator : MonoBehaviour
     void Update()
     {
 
-        Debug.Log(current.frames.Length);
         if (current == null || current.frames.Length == 0) return;
         timer += Time.deltaTime;
         float frameTime = 1f / current.fps;
@@ -24,7 +23,6 @@ public class CustomAnimator : MonoBehaviour
         {
             timer -= frameTime;
             index = (index + 1) % current.frames.Length;
-            Debug.Log(index);
             sr.sprite = current.frames[index];
         }
     }
