@@ -2,6 +2,12 @@ using UnityEngine;
 
 public class Goal : MonoBehaviour
 {
+    void Start(){
+        VictoryManager[] winScreens = transform.parent.parent.GetComponentsInChildren<VictoryManager>();
+        winScreen = winScreens[0];
+        edge = this.GetComponent<BoxCollider2D>();
+    }
+
     public VictoryManager winScreen;
     public BoxCollider2D edge;
     public int taken = 0;
