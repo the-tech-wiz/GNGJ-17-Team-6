@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
+using System.Collections;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -36,21 +37,39 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void LoadMenu(){
-        Time.timeScale = 1f;
-        SceneController.instance.LoadScene("Level Select");
+        StartCoroutine(DelayedAction(0.5f, () =>{
+            Resume();
+            SceneController.instance.LoadScene("Level Select");
+        }));
     }
 
     public void Restart(){
-        Time.timeScale = 1f;
-        SceneController.instance.Reload();
+        StartCoroutine(DelayedAction(0.5f, () =>{
+            Resume();
+            SceneController.instance.Reload();
+        }));
     }
 
     public void Exit(){
-        Time.timeScale = 1f;
-        Application.Quit();
+        StartCoroutine(DelayedAction(0.5f, () =>{
+            Application.Quit();
+        }));
     }
 
     public void Click(){
         AudioManager.instance.Play("Button");
+    }
+
+    bool isExecuting = false;
+    IEnumerator DelayedAction(float time, System.Action task){
+        if(isExecuting)
+            yield break;
+        isExecuting = true;
+
+        yield return new WaitForSecondsRealtime(time);
+
+        task();
+
+        isExecuting = false;
     }
 }
