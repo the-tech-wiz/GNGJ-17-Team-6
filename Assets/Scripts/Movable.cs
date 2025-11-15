@@ -39,6 +39,7 @@ public class Movable : MonoBehaviour
         {
             baseDirection = direction;
             origin = true;
+            //AudioManager.instance.Play("Purr");
             InvokeRepeating("MUS", 0f, delayPerStep);
         }
         /*while (CanMove(direction) != Mathf.Infinity){ 

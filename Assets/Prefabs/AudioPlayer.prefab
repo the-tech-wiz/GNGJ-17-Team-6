@@ -100,3 +100,8 @@ MonoBehaviour:
     volume: 0.886
     loop: 0
     source: {fileID: 0}
+  - name: Purr
+    clip: {fileID: 8300000, guid: 5d7f9c3dc4e8b9643be3d70c2009f76e, type: 3}
+    volume: 0.886
+    loop: 0
+    source: {fileID: 0}

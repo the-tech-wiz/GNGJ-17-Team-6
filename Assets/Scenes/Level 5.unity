@@ -771,6 +771,10 @@ PrefabInstance:
       propertyPath: sounds.Array.data[0].loop
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2744224118122643221, guid: 5975ab45aadac2d499e0920d01cf0a91, type: 3}
+      propertyPath: sounds.Array.data[0].volume
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 4814547078328357687, guid: 5975ab45aadac2d499e0920d01cf0a91, type: 3}
       propertyPath: m_Name
       value: AudioPlayer
