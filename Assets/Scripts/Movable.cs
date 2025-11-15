@@ -119,6 +119,10 @@ public class Movable : MonoBehaviour
                 if (!slime.GetComponent<Movable>().isMoving)
                     nobody = slime.GetComponent<Movable>().CanMove(direction);
         }
+        foreach(Lock block in transform.parent.parent.GetComponentsInChildren<Lock>()){
+            if(collisionTilemap.WorldToCell(block.transform.position) == gridPos && block.isLocked())
+                nobody = Mathf.Infinity;
+        }
         if (collisionTilemap.HasTile(gridPos) || nobody == Mathf.Infinity)
             return Mathf.Infinity;
         return nobody + weight;
