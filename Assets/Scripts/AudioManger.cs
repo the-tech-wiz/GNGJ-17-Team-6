@@ -53,6 +53,24 @@ public class AudioManager : MonoBehaviour
         s.source.Pause();
     }
 
+    public void SetSound(string name, float volume){
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(s == null){
+            Debug.LogWarning("Sound " + name + " not found!");
+            return;
+        }
+        s.source.volume = volume;
+    }
+
+    public float GetVolume(string name){
+        Sound s = Array.Find(sounds, sound => sound.name == name);
+        if(s == null){
+            Debug.LogWarning("Sound " + name + " not found!");
+            return 0f;
+        }
+        return s.source.volume;
+    }
+
     public void StopTrack(Scene stopped){
         if(stopped.name == "Level Select"){
             Pause("Select");
