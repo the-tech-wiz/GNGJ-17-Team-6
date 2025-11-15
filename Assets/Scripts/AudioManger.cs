@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Audio;
 using System;
+using UnityEngine.SceneManagement;
 
 public class AudioManager : MonoBehaviour
 {
@@ -27,6 +28,8 @@ public class AudioManager : MonoBehaviour
     }
 
     void Start(){
+        SceneManager.sceneUnloaded += StopTrack;
+        SceneManager.sceneLoaded += StartTrack;
         Play("Music");
         Pause("Music");
         Play("Theme");
@@ -49,4 +52,34 @@ public class AudioManager : MonoBehaviour
         }
         s.source.Pause();
     }
+
+    public void StopTrack(Scene stopped){
+        if(stopped.name == "Level Select"){
+            Pause("Select");
+        }
+        else{
+            Pause("Music");
+        }
+    }
+    public void StartTrack(Scene started, LoadSceneMode mode){
+        if(started.name == "Level Select"){
+            Play("Theme");
+        }
+        else{
+            Sound s = Array.Find(sounds, sound => sound.name == "Music");
+            s.source.UnPause();
+        }
+    }
+
+    /*public void ChangeTrack(Scene prev, Scene curr){
+        if (prev.name == "Level Select"){
+            Pause("Select");
+            Sound s = Array.Find(sounds, sound => sound.name == "Music");
+            s.source.UnPause();
+        }
+        if (curr.name == "Level Select"){
+            Pause("Music");
+            Play("Theme");
+        }
+    }*/
 }
