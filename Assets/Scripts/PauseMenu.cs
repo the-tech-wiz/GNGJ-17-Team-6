@@ -36,14 +36,17 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void LoadMenu(){
+        Time.timeScale = 1f;
         SceneController.instance.LoadScene("Level Select");
     }
 
     public void Restart(){
+        Time.timeScale = 1f;
         SceneController.instance.Reload();
     }
 
     public void Exit(){
+        Time.timeScale = 1f;
         Application.Quit();
     }
 
