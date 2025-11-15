@@ -36,15 +36,15 @@ public class PauseMenu : MonoBehaviour
     }
 
     public void LoadMenu(){
-        SceneController.instance.LoadScene("Main Menu");
+        SceneController.instance.LoadScene("Level Select");
     }
 
     public void Restart(){
         SceneController.instance.Reload();
     }
 
-    public void Options(){
-        Debug.LogWarning("Options not implemented!");
+    public void Exit(){
+        Application.Quit();
     }
 
     public void Click(){

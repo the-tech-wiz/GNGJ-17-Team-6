@@ -736,7 +736,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2827326814067888180}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: LoadMenu
+        m_MethodName: Exit
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -771,7 +771,7 @@ GameObject:
   - component: {fileID: 495585707392286159}
   - component: {fileID: 8174149331955286277}
   m_Layer: 5
-  m_Name: Option
+  m_Name: Levels
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -824,7 +824,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 1773086526044078132, guid: c03a15a21793ed74a8a5d2b6d3ad2c69, type: 3}
+  m_Sprite: {fileID: 4926917364349316413, guid: 9f7a31669459aa647940c2809bb8f5eb, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -864,7 +864,7 @@ MonoBehaviour:
     m_FadeDuration: 0.1
   m_SpriteState:
     m_HighlightedSprite: {fileID: 0}
-    m_PressedSprite: {fileID: 1363264153791987886, guid: 6048618ea96bd344fa8615faaad689a4, type: 3}
+    m_PressedSprite: {fileID: -5334980989562178285, guid: aaa2e802a340039458851ff1a4ec0293, type: 3}
     m_SelectedSprite: {fileID: 0}
     m_DisabledSprite: {fileID: 0}
   m_AnimationTriggers:
@@ -880,7 +880,19 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 2827326814067888180}
         m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
-        m_MethodName: Options
+        m_MethodName: LoadMenu
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 2827326814067888180}
+        m_TargetAssemblyTypeName: PauseMenu, Assembly-CSharp
+        m_MethodName: Click
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1465,4 +1477,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   victoryScreenUI: {fileID: 4156620815285186210}
-  failScreenUI: {fileID: 0}
+  failScreenUI: {fileID: 7305341071563137228}
