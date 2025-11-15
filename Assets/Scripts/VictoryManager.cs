@@ -7,7 +7,11 @@ public class VictoryManager : MonoBehaviour
     public GameObject failScreenUI;
 
     public void Win(){
-        AudioManager.instance.Play("Win");
+        int stepSound = UnityEngine.Random.Range(0, 2);
+        if (stepSound == 0)
+            AudioManager.instance.Play("Win1");
+        else
+            AudioManager.instance.Play("Win2");
         victoryScreenUI.SetActive(true);
     }
     
