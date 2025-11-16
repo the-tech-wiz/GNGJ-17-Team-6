@@ -100,3 +100,8 @@ MonoBehaviour:
     volume: 0.886
     loop: 0
     source: {fileID: 0}
+  - name: Plate
+    clip: {fileID: 8300000, guid: 0191a562d4ae0fa4fa2d51cfe2415669, type: 3}
+    volume: 0.886
+    loop: 0
+    source: {fileID: 0}
