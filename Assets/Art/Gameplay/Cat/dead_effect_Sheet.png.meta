@@ -1,0 +1,391 @@
+fileFormatVersion: 2
+guid: 63bc98dc73458f34abd43d0e1aa2cb82
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7636703280951097294
+    second: dead_effect_Sheet_0
+  - first:
+      213: -6990230528341756403
+    second: dead_effect_Sheet_1
+  - first:
+      213: 4584566747061356775
+    second: dead_effect_Sheet_2
+  - first:
+      213: 7052572475058869693
+    second: dead_effect_Sheet_3
+  - first:
+      213: -6234206933608000873
+    second: dead_effect_Sheet_4
+  - first:
+      213: -5230169981226048144
+    second: dead_effect_Sheet_5
+  - first:
+      213: 4291183935155326302
+    second: dead_effect_Sheet_6
+  - first:
+      213: 4032187299020454661
+    second: dead_effect_Sheet_7
+  - first:
+      213: 1523363598370502806
+    second: dead_effect_Sheet_8
+  - first:
+      213: 2778473012175175870
+    second: dead_effect_Sheet_9
+  - first:
+      213: -2276540497212399870
+    second: dead_effect_Sheet_10
+  - first:
+      213: 4359543596639600700
+    second: dead_effect_Sheet_11
+  - first:
+      213: -4821424533259269069
+    second: dead_effect_Sheet_12
+  - first:
+      213: -4169241714396533404
+    second: dead_effect_Sheet_13
+  - first:
+      213: -7950167620434171336
+    second: dead_effect_Sheet_14
+  - first:
+      213: 8841150530080761345
+    second: dead_effect_Sheet_15
+  - first:
+      213: -6821863186395485462
+    second: dead_effect_Sheet_16
+  - first:
+      213: -2837053485861080191
+    second: dead_effect_Sheet_17
+  - first:
+      213: -5478516060523058159
+    second: dead_effect_Sheet_18
+  - first:
+      213: 7503276421585657812
+    second: dead_effect_Sheet_19
+  - first:
+      213: -6065065211053930602
+    second: dead_effect_Sheet_20
+  - first:
+      213: 5398162474263925771
+    second: dead_effect_Sheet_21
+  - first:
+      213: -6233964934320991362
+    second: dead_effect_Sheet_22
+  - first:
+      213: -2609055351708008781
+    second: dead_effect_Sheet_23
+  - first:
+      213: 7967205529316153117
+    second: dead_effect_Sheet_24
+  - first:
+      213: 6252214785128921971
+    second: dead_effect_Sheet_25
+  - first:
+      213: -1668799365068541753
+    second: dead_effect_Sheet_26
+  - first:
+      213: 2464809417016647272
+    second: dead_effect_Sheet_27
+  - first:
+      213: -4643738673683154831
+    second: dead_effect_Sheet_28
+  - first:
+      213: 7792566197610816994
+    second: dead_effect_Sheet_29
+  - first:
+      213: -5567998888015148233
+    second: dead_effect_Sheet_30
+  - first:
+      213: 6597450088934600246
+    second: dead_effect_Sheet_31
+  - first:
+      213: 2297956238439931784
+    second: dead_effect_Sheet_32
+  - first:
+      213: 6085069952776029687
+    second: dead_effect_Sheet_33
+  - first:
+      213: 6326852822001055897
+    second: dead_effect_Sheet_34
+  - first:
+      213: -3024243694307839992
+    second: dead_effect_Sheet_35
+  - first:
+      213: 1572000993406167280
+    second: dead_effect_Sheet_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: dead_effect_Sheet_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 23889d3b3daf40690800000000000000
+      internalID: -7636703280951097294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_effect_Sheet_1
+      rect:
+        serializedVersion: 2
+        x: 74
+        y: 0
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: d06391cce56bdfe90800000000000000
+      internalID: -6990230528341756403
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_effect_Sheet_2
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 0
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 7e809a79a27af9f30800000000000000
+      internalID: 4584566747061356775
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_effect_Sheet_3
+      rect:
+        serializedVersion: 2
+        x: 222
+        y: 0
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: db5d498cc45cfd160800000000000000
+      internalID: 7052572475058869693
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_effect_Sheet_4
+      rect:
+        serializedVersion: 2
+        x: 296
+        y: 0
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 792940af2d5ab79a0800000000000000
+      internalID: -6234206933608000873
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_effect_Sheet_5
+      rect:
+        serializedVersion: 2
+        x: 370
+        y: 0
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 0752c1adc14ba67b0800000000000000
+      internalID: -5230169981226048144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dead_effect_Sheet_6
+      rect:
+        serializedVersion: 2
+        x: 444
+        y: 0
+        width: 74
+        height: 81
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e5dcbc8ad095d8b30800000000000000
+      internalID: 4291183935155326302
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 20ab166ee231bc145bded4cf7ffeeb34
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":7.0,"y":1.0},"gridSpriteSize":{"x":74.0,"y":81.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      dead_effect_Sheet_0: -7636703280951097294
+      dead_effect_Sheet_1: -6990230528341756403
+      dead_effect_Sheet_2: 4584566747061356775
+      dead_effect_Sheet_3: 7052572475058869693
+      dead_effect_Sheet_4: -6234206933608000873
+      dead_effect_Sheet_5: -5230169981226048144
+      dead_effect_Sheet_6: 4291183935155326302
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

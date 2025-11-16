@@ -180,6 +180,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: '::'
   failScreen: {fileID: 0}
+  explodePrefab: {fileID: 4715577526758469209, guid: 65f8c7c1b34fd3a4ca34bdcdfee540e2, type: 3}
 --- !u!95 &2371998418678839469
 Animator:
   serializedVersion: 7
