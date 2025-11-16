@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 public class Goal : MonoBehaviour
 {
@@ -22,18 +23,20 @@ public class Goal : MonoBehaviour
                 if (plate.taken == 0) isAll = false;
             }
             if(isAll)
-                if(Stopped())
-                    winScreen.Win();
+                if(Stopped()){
+                    StartCoroutine(DelayedWin());
+                }
         }
     }
 
     private bool Stopped(){
-        Transform cat = GameObject.Find("Controllables").GetComponent<Transform>();
+        GameObject cat = GameObject.Find("Controllables");
         if(cat == null){
             Debug.LogWarning("Controllables not found!");
             return true;
         }
         foreach(Movable slime in cat.GetComponentsInChildren<Movable>()){
+            Debug.Log("Slime found");
             if(slime.origin)
                 return false;
         }
@@ -44,6 +47,16 @@ public class Goal : MonoBehaviour
         if(collision.CompareTag("Player")){
             taken -= 1;
         }
+    }
+
+    IEnumerator DelayedWin(){
+        yield return new WaitForSecondsRealtime(0.1f);
+        bool isAll = true;
+            foreach(Goal plate in transform.parent.GetComponentsInChildren<Goal>()){
+                if (plate.taken == 0) isAll = false;
+            }
+            if(isAll)
+                winScreen.Win();
     }
 
     /*void Update(){
