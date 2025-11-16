@@ -81,12 +81,12 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Unlock
-    clip: {fileID: 8300000, guid: 820df1260f19e62458567461ba7ff446, type: 3}
+    clip: {fileID: 8300000, guid: 5baa1ea28831f7f48bbab3cf5ac0cb35, type: 3}
     volume: 0.886
     loop: 0
     source: {fileID: 0}
   - name: Pickup
-    clip: {fileID: 8300000, guid: 5baa1ea28831f7f48bbab3cf5ac0cb35, type: 3}
+    clip: {fileID: 8300000, guid: 383fec076c1dea3438139120e59fb2aa, type: 3}
     volume: 0.886
     loop: 0
     source: {fileID: 0}
