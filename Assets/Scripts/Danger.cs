@@ -3,6 +3,7 @@ using UnityEngine;
 public class Danger : MonoBehaviour
 {
     public VictoryManager failScreen;
+    public GameObject explodePrefab;
 
     void Start()
     {
@@ -12,6 +13,7 @@ public class Danger : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
+            Instantiate(explodePrefab, collision.transform, false);
             failScreen.Fail();
         }
     }
