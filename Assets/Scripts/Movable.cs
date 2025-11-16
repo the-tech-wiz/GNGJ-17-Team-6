@@ -20,6 +20,10 @@ public class Movable : MonoBehaviour
     [HideInInspector]
     public bool origin;
     bool connected;
+
+    [HideInInspector]
+    public bool jingle = false;
+
     void Awake()
     {
         isMoving = false;
@@ -72,6 +76,8 @@ public class Movable : MonoBehaviour
                     AudioManager.instance.Play("Step2"); */
         //origin = true;
         Move(direction);
+
+        PlateJingle();
         //origin = false;
         Broken(direction);
     }
@@ -230,5 +236,16 @@ public class Movable : MonoBehaviour
         return false;
     }
 
-
+    void PlateJingle(){
+        bool shouldJingle = false;
+        foreach(Movable slime in transform.parent.GetComponentsInChildren<Movable>()){
+            if(slime.jingle) shouldJingle = true;
+        }
+        if(shouldJingle){ 
+            AudioManager.instance.Play("Plate");
+            foreach(Movable slime in transform.parent.GetComponentsInChildren<Movable>()){
+                slime.jingle = false;
+            }
+        }
+    }
 }
