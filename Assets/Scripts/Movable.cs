@@ -65,10 +65,11 @@ public class Movable : MonoBehaviour
     public void GetAhead(Vector3 direction)
     {
         int stepSound = UnityEngine.Random.Range(0, 2);
-        if (stepSound == 0)
-            AudioManager.instance.Play("Step1");
-        else
-            AudioManager.instance.Play("Step2");
+        AudioManager.instance.Play("Slide");
+        /*         if (stepSound == 0)
+                    AudioManager.instance.Play("Step1");
+                else
+                    AudioManager.instance.Play("Step2"); */
         //origin = true;
         Move(direction);
         //origin = false;
@@ -126,8 +127,9 @@ public class Movable : MonoBehaviour
                 if (!slime.GetComponent<Movable>().isMoving)
                     nobody = slime.GetComponent<Movable>().CanMove(direction);
         }
-        foreach(Lock block in transform.parent.parent.GetComponentsInChildren<Lock>()){
-            if(collisionTilemap.WorldToCell(block.transform.position) == gridPos && block.isLocked())
+        foreach (Lock block in transform.parent.parent.GetComponentsInChildren<Lock>())
+        {
+            if (collisionTilemap.WorldToCell(block.transform.position) == gridPos && block.isLocked())
                 nobody = Mathf.Infinity;
         }
         if (collisionTilemap.HasTile(gridPos) || nobody == Mathf.Infinity)

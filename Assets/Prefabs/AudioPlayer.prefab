@@ -86,17 +86,12 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Pickup
-    clip: {fileID: 8300000, guid: 488fd68374340bf449fbae93949fc10f, type: 3}
+    clip: {fileID: 8300000, guid: d7976bea21fd23189ba7833a4b223253, type: 3}
     volume: 0.886
     loop: 0
     source: {fileID: 0}
-  - name: Step1
-    clip: {fileID: 8300000, guid: 07982d08692b5394f9de03b10ed3297e, type: 3}
-    volume: 0.886
-    loop: 0
-    source: {fileID: 0}
-  - name: Step2
-    clip: {fileID: 8300000, guid: f39d892f6c0b584409e788ec94bdff27, type: 3}
+  - name: Slide
+    clip: {fileID: 8300000, guid: cf8c34829a84e9f3192111f55cdab037, type: 3}
     volume: 0.886
     loop: 0
     source: {fileID: 0}
