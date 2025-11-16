@@ -46,12 +46,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: '::'
   sounds:
   - name: Theme
-    clip: {fileID: 8300000, guid: e16dd0c107acdc149a73ac71be39d5e7, type: 3}
+    clip: {fileID: 8300000, guid: 71803d75da378eb4da8557997e276252, type: 3}
     volume: 0.886
     loop: 1
     source: {fileID: 0}
   - name: Music
-    clip: {fileID: 8300000, guid: 362eeded091933c42932aa38de0abdd8, type: 3}
+    clip: {fileID: 8300000, guid: 8ee8fc9ac50198e42a1bc39556f60531, type: 3}
     volume: 0.886
     loop: 1
     source: {fileID: 0}
@@ -71,7 +71,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Select
-    clip: {fileID: 8300000, guid: d73a435b58bcbbe478c5bdbd328bd5ef, type: 3}
+    clip: {fileID: 8300000, guid: cc664dbb13a63164f9cc4df8d0eedcc0, type: 3}
     volume: 0.886
     loop: 1
     source: {fileID: 0}
@@ -86,7 +86,7 @@ MonoBehaviour:
     loop: 0
     source: {fileID: 0}
   - name: Pickup
-    clip: {fileID: 8300000, guid: d7976bea21fd23189ba7833a4b223253, type: 3}
+    clip: {fileID: 8300000, guid: 5baa1ea28831f7f48bbab3cf5ac0cb35, type: 3}
     volume: 0.886
     loop: 0
     source: {fileID: 0}
