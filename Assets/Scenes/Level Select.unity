@@ -373,9 +373,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4808610531496258520, guid: dd9c698f738608c07adda9bafe24bf29, type: 3}
+      propertyPath: m_NormalizedViewPortRect.width
+      value: 0.99999994
+      objectReference: {fileID: 0}
     - target: {fileID: 5960845130992605181, guid: dd9c698f738608c07adda9bafe24bf29, type: 3}
       propertyPath: m_Name
       value: MainCamera
+      objectReference: {fileID: 0}
+    - target: {fileID: 6868840561267581991, guid: dd9c698f738608c07adda9bafe24bf29, type: 3}
+      propertyPath: m_GridSnapping
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
